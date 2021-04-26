@@ -1,0 +1,162 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1250">
+        <title>Forme</title>
+        <style type="text/css">
+            h1 { color: CornflowerBlue; font-face: sans-serif; font-size: 14pt }
+            body{ font-family:arial }
+            table{ background:silver }
+            
+            table.mainmenu {
+                background: black;
+                color:white;
+                width: 120;
+            }
+            
+            table.menu {
+                visibility:hidden;
+                background: black;
+                color:white;
+                width: 150;
+                position:absolute;
+            }
+            
+            td.menu{background:CornflowerBlue}
+
+        </style>
+        
+        <script language="JavaScript">
+        var border = 1;
+        function provera() {
+            ime = document.forms['forma'].txtIme.value;
+            prezime = document.forms['forma'].txtPrezime.value;
+            jmbg = document.forms['forma'].txtJmbg.value;
+            marka = document.forms['forma'].cmbMarka.value;
+            tip = document.forms['forma'].txtTip.value;
+            registracija = document.forms['forma'].txtReg.value;
+            
+            if(ime == "") {
+                alert("Niste popunili ime.");
+                return false;
+            }else if(prezime == "") {
+                alert("Niste popunili prezime.");
+                return false;
+            }else if(jmbg == "") {
+                alert("Niste popunili JMBG.");
+                return false;
+            }else if(tip == "") {
+                alert("Niste popunili tip.");
+                return false;
+            }else if(registracija == "") {
+                alert("Niste popunili registraciju.");
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function showmenu(elmnt)
+        {
+            document.getElementById(elmnt).style.visibility="visible";
+        }
+        
+        function hidemenu(elmnt)
+        {
+            document.getElementById(elmnt).style.visibility="hidden";
+        }
+
+        function border()
+        {
+            alert("Toggle Broder");
+            document.getElementById("regTable").setAttribute("border", "0");
+        }
+        
+        /*function setBorder()
+        {
+            if(border == 1)
+                document.getElementById("regTable").setAttribute("border", "1");
+            else
+                document.getElementById("regTable").setAttribute("border", "0");
+        }*/
+    </script>
+
+    </head>
+    
+    <body>
+        <p><b><h1 color="CornflowerBlue"; font="sans-serif">Produženje registracije</h1></b></p>
+        
+        <!-- Glavni meni -->
+        <!-- <table class="mainmenu" width="100%" >
+        <tr bgcolor="CornflowerBlue">
+        <td onMouseOver="showmenu('lookmain')" onMouseOut="hidemenu('lookmain')">
+        <p>Look & Feel</p>
+            <table class="menu" id="lookmain" width="120" >
+            <tr><td class="menu" onClick="border()">
+            <a>Toggle Border</a>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        </table> -->
+        
+        <table width="100%" border="1">
+			<tr bgcolor="red">
+				<td onMouseOver="showmenu('tutorials')" onMouseOut="hidemenu('tutorials')">
+				<a href="/default.asp"><b>Look&amp;Feel</b></a><br />
+				<table class="menu" id="tutorials" width="120" border="1">
+					<tr><td class="menu" onclick="border()">  <a>Toggle Border</a></td></tr>
+				</table>  
+                </td>
+			</tr>
+		</table>
+        
+        <p> 
+            Na ovoj stranici možete obaviti produženje registracije Vašeg
+            automobila. <br> Molimo Vas da popunite sledeći formular.
+        </p>
+        
+        <form name="forma" action="zadatak4.html" onSubmit="return provera()">
+        
+        <!-- TABELA -->
+        <table border="1" class = "regTable" id = "regTable">
+            <tr>
+                <th colspan="2">Produženje registracije</th>
+            </tr>
+            <tr>
+                <td>Ime:</td>
+                <td><input type = "text" name = "txtIme"></td>
+            </tr>
+            <tr>
+                <td>Prezime:</td>
+                <td><input type = "text" name = "txtPrezime"></td>
+            </tr>
+            <tr>
+                <td>JMBG:</td>
+                <td><input type = "text" name = "txtJmbg"></td>
+            </tr>
+            <tr>
+                <td>Marka vozila:</td>
+                <td><select name="cmbMarka">
+                    <option value="1">Mercedes
+                    <option value="2">Peugeot
+                    <option value="3">Renault
+                </select></td>
+            </tr>
+            <tr>
+                <td>Tip vozila:</td>
+                <td><input type = "text" name="txtTip"></td>
+            </tr>
+            <tr>
+                <td>Registarska oznaka:</td>
+                <td><input type = "text" name="txtReg"></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><input type = "submit" name="btnSubmit" value="Pošalji"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

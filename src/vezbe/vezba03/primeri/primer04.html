@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Meniji</title>
+<style type="text/css">
+div.menu {
+			background: gray;
+			color:white;
+			width: 100;
+		     }
+td {
+		text-align: left;
+		font-family: verdana,helvetica,arial;
+		font-size: 10pt;
+		width:100px;
+	 }
+p {
+		text-align: left;
+		font-family: verdana,helvetica,arial;
+		font-size: 12pt;
+	}
+</style>
+<script>
+  var hidden = true;
+	function	showmain(item)
+	{
+	  if (hidden)
+	    return;
+		var	target;
+		target = document.getElementById(item.id + "main");
+		target.style.display = "block";
+	}
+	function	hidemain(item)
+	{
+	  if (hidden)
+	    return;
+		var	target;
+		target = document.getElementById(item.id + "main");
+		target.style.display = "none";
+	}
+
+	function handleClick(item) {
+	  if (hidden == true) {
+		  hidden = false;
+	    showmain(item);
+	  } else {
+	    hidemain(item);
+		  hidden = true;
+	  }
+	}
+</script>
+<body>
+<h1>Meniji (kliknite na File ili Edit ili View...)</h1>
+
+<table border="0">
+<tr bgcolor="gray">
+<td valign="top" id="file" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<p>File</p>
+</td>
+
+<td valign="top" id="edit" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<p>Edit</p>
+</td>
+
+<td valign=top id="view" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<p>View</p>
+</td>
+
+</tr>
+
+<tr>
+<td valign=top id="file" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<div class="menu" style="display:none" id="filemain">
+<ul>
+<li>Open
+<li>Save
+<li>Exit
+</ul>
+</div>
+</td>
+
+<td valign=top id="edit" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<div class="menu" style="display:none" id="editmain">
+<ul>
+<li>Cut
+<li>Copy
+<li>Paste
+</ul>
+</div>
+</td>
+
+<td valign=top id="view" onmouseover="showmain(this)" onmouseout="hidemain(this)" onMouseUp="handleClick(this)" >
+<div class="menu" style="display:none" id="viewmain">
+<ul>
+<li>Page Layout
+<li>Toolbars...
+</ul>
+</div>
+</td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+</body>
+</html>

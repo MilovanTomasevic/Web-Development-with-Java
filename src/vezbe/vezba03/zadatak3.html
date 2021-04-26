@@ -1,0 +1,89 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1250">
+        <title>Forme</title>
+        <link rel="stylesheet" href="stilovi.css" />
+        
+        <script language="JavaScript">
+        function provera() {
+            ime = document.forms['forma'].txtIme.value;
+            prezime = document.forms['forma'].txtPrezime.value;
+            jmbg = document.forms['forma'].txtJmbg.value;
+            marka = document.forms['forma'].cmbMarka.value;
+            tip = document.forms['forma'].txtTip.value;
+            registracija = document.forms['forma'].txtReg.value;
+            
+            if(ime == "") {
+                alert("Niste popunili ime.");
+                return false;
+            }else if(prezime == "") {
+                alert("Niste popunili prezime.");
+                return false;
+            }else if(jmbg == "") {
+                alert("Niste popunili JMBG.");
+                return false;
+            }else if(tip == "") {
+                alert("Niste popunili tip.");
+                return false;
+            }else if(registracija == "") {
+                alert("Niste popunili registraciju.");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+
+    </head>
+    
+    <body>
+        <h1>Produženje registracije</h1>
+        <p> 
+            Na ovoj stranici možete obaviti produženje registracije Vašeg
+            automobila. <br> Molimo Vas da popunite sledeći formular.
+        </p>
+        
+        <form name="forma" action="zadatak3.html" onSubmit="return provera()">
+        
+        <!-- TABELA -->
+        <table border="2">
+            <tr>
+                <th colspan="2">Produženje registracije</th>
+            </tr>
+            <tr>
+                <td>Ime:</td>
+                <td><input type = "text" name = "txtIme"></td>
+            </tr>
+            <tr>
+                <td>Prezime:</td>
+                <td><input type = "text" name = "txtPrezime"></td>
+            </tr>
+            <tr>
+                <td>JMBG:</td>
+                <td><input type = "text" name = "txtJmbg"></td>
+            </tr>
+            <tr>
+                <td>Marka vozila:</td>
+                <td><select name="cmbMarka">
+                    <option value="1">Mercedes
+                    <option value="2">Peugeot
+                    <option value="3">Renault
+                </select></td>
+            </tr>
+            <tr>
+                <td>Tip vozila:</td>
+                <td><input type = "text" name="txtTip"></td>
+            </tr>
+            <tr>
+                <td>Registarska oznaka:</td>
+                <td><input type = "text" name="txtReg"></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><input type = "submit" name="btnSubmit" value="Pošalji"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

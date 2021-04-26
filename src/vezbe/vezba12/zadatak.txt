@@ -1,0 +1,11 @@
+Zadatak 1. (2 poena) Realizovati primer iz servleta (web shop) upotrebom JSP
+tehnologije. Svaki ispis u servletu tipa out.println("<p>tekst</p>"); prevesti
+u odgovarajuæi red u JSP stranici: <p>tekst</p>
+
+a) Zadatak mora da poseduje prethodnu funkcionalnost (iz zadatka sa servletima),
+što znaèi da mora da sadrži stranice za registraciju i prijavljivanje korisnika.
+Spisak registrovanih korisnika smestiti u datoteku.
+
+b) Primer proširiti stranicom za kupovinu proizvoda (unosi se ime, prezime,
+broj kreditne kartice i datum isteka), koja snima nadrudžbu u tekstualnu
+datoteku (kupovina uvek uspeva :).

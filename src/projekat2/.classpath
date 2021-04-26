@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Biblioteka/src/java"/>
+	<classpathentry kind="src" path="server/projekat1/Biblioteka/src"/>
+	<classpathentry kind="src" path="test/biblioteka/src"/>
+	<classpathentry excluding="biblioteka/src/" kind="src" path="test"/>
+	<classpathentry exported="true" kind="lib" path="Biblioteka/build/web/WEB-INF/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="Biblioteka/build/web/WEB-INF/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="Biblioteka/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="Biblioteka/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="server/projekat1/Biblioteka/dist/Biblioteka.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Biblioteka/build/web/WEB-INF/classes"/>
+</classpath>

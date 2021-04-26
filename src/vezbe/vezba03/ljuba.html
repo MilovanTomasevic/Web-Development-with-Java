@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1250">
+		<title> Forme </title>
+		<style type="text/css">
+			h1 { color: blue }
+			table { background: silver; }
+			a { color:black;
+				text-decoration:none;
+				font:bold }
+			a:hover { color: blue; }
+			td.menu{background:silver; }
+			table.menu
+			{
+				font-size:100%;
+				position:absolute;
+				visibility:hidden;
+			}
+		</style>
+		
+		<script language="JavaScript">
+			function provera()
+			{
+				vrednost1 = document.forms['form1'].polje1.value;
+				vrednost2 = document.forms['form2'].polje2.value;
+				vrednost3 = document.forms['form3'].polje3.value;
+				vrednost5 = document.forms['form5'].polje5.value;
+				vrednost6 = document.forms['form6'].polje6.value;
+				
+				if(vrednost1 == "")
+				{
+					alert("Pogresan unos. Unesite ime!");
+					return false;
+				}else
+					if(vrednost2 == "")
+					{
+						alert("Pogresan unos. Unesite prezime!");
+						return false;
+					}else
+						if(isNaN(vrednost3))
+						{
+							alert("Pogresan unos. Niste uneli broj!");
+							return false;
+						} else
+								if(vrednost3<100000000000 || vrednost3>3112999999999)
+							{
+								alert("Pogresan unos. JMBG mora imati 13 karaktera!");
+								return false;
+							}else
+								if(vrednost5 == "")
+								{
+										alert("Pogresan unos. Unesite tip vozila!");
+										return false;
+								}else
+									if(vrednost6 == "")
+									{
+										alert("Pogresan unos. Unesite registarsku oznaku!");
+										return false;
+									}
+					return true;
+			}
+			
+			function showmenu(elmnt)
+			{
+				document.getElementById(elmnt).style.visibility="visible";
+			}
+			function hidemenu(elmnt)
+			{
+				document.getElementById(elmnt).style.visibility="hidden";
+			}
+			function border()
+			{
+				alert("Toggle Broder");
+                document.getElementById("regTable").setAttribute("border", "0");
+			}
+    </script>
+			
+	</head>
+
+	<body>
+		<p><b><h1> Produzenje registracije </h1></b></p>
+		
+		<table width="100%" border="1">
+			<tr bgcolor="red">
+				<td onMouseOver="showmenu('tutorials')" onMouseOut="hidemenu('tutorials')">
+				<a href="/default.asp"><b>Look&amp;Feel</b></a><br />
+				<table class="menu" id="tutorials" width="120" border="1">
+					<tr><td class="menu" onclick="border()">  <a>Toggle Border</a></td></tr>
+				</table>  
+                </td>
+			</tr>
+		</table>
+	
+		<p>
+			Na ovoj strani mozete obaviti produzenje registracije Vaseg automobila. 
+			<br/>
+			Molimo Vas da popunite sledeci formilar.
+		</p>
+		
+		<table id="regTable" border="1">
+		<tr>
+			<th colspan="2"> Produzenje registracije </th>
+		</tr>
+		
+		<form name="form1">
+		<tr>
+			<td> Ime: </td>
+			<td> <input type="text" name="polje1"> </input></td>
+		</tr>	
+		</form>
+		
+		<form name="form2">
+		<tr>
+			<td> Prezime: </td>
+			<td> <input type="text" name="polje2"> </input> </td>
+		</tr>
+		</form>
+		
+		<form name="form3">
+		<tr>
+			<td> JMBG: </td>
+			<td> <input type="text" name="polje3"> </input></td>
+		</tr>
+		</form>
+		
+		<tr>
+			<td> Marka vozila: </td>
+			<td>
+				<select name="polje4">
+					<option value="1"> Mercedes </option>
+					<option value="2"> Peugeot </option>
+					<option value="3"> Renault </option>
+				</select>
+			</td>
+		</tr>
+		
+		<form name="form5">
+		<tr>
+			<td> Tip vozila: </td>	
+			<td> <input type="text" name="polje5"> </input></td>
+		</tr>
+		</form>
+		
+		<form name="form6">
+		<tr>
+			<td> Registarska oznaka: </td>
+			<td> <input type="text" name="polje6"> </input></td>
+		</tr>
+		</form>
+		
+		<form name="forma" onSubmit="return provera()">
+		<tr>
+			<td> &nbsp; </td>
+			<td> <input type="submit" value="Posalji"> </input></td>
+		</tr>
+		</form>
+		
+		</table>	
+		
+		<p> U gornjem combo box-u kao stavke nalaze se sledece vrednosti:<i> Mercedes, Peugeot i Renault </i>.</p>
+		
+	</body>
+</html>

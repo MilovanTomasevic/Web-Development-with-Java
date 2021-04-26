@@ -1,0 +1,2 @@
+cls
+javac Main.java

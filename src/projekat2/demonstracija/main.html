@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1250" />
+		<title>Biblioteka</title>
+	</head>
+	<body>
+		<h1>Prijavljeni korisnik: Tomas</h1>
+		<h2>Knjige:</h2>
+		<form action="#" method="get">
+			<select name="filter">
+				<option value="allBook" selected>Spisak svih knjiga</option>
+				<option value="allAvailableBook">Spisak svih knjiga kojih trenutno ima u biblioteci</option>
+			</select>
+			<input name="" type="submit" value="Filtriraj">
+		</form>
+  		<table border="1" width="100%">
+			<tr bgcolor="lightgrey">
+				<th width="20%">ISBN</th>
+				<th width="50%">Naslov</th>
+				<th width="20%">Autor</th>
+				<th width="10%">Broj primeraka</th>
+			</tr>
+			<tr> 
+				<td>86-7395-074-0</td>
+				<td>Ra�unarska simulacija</td>
+				<td>Bo�idar Radenkovi�</td>
+				<td>3(<a href="take_book.html">zadu�i</a>)</td>
+			</tr>
+			<tr> 
+				<td>86-7555-104-5</td>
+				<td>Visual C++ 5 Biblija</td>
+				<td>Paul Yao</td>
+				<td>5(<a href="take_book.html">zadu�i</a>)</td>
+			</tr>
+			<tr> 
+				<td>0-7356-1721-X</td>
+				<td>Designing Enterprise Applications with Microsoft Visual Basic .NET</td>
+				<td>Robert Ian Oliver</td>
+				<td>0</td>
+			</tr>
+		</table>
+		<p>
+			<a href="add_book.html">Dodavanje nove knjige</a>
+		</p>
+  		<h2>�lanovi:</h2>
+  		<table border="1" width="100%">
+			<tr bgcolor="lightgrey">
+				<th width="20%">JMBG</th>
+				<th width="20%">Prezime</th>
+				<th width="20%">Ime</th>
+				<th width="20%">E-mail</th>
+				<th width="20%">Zadu�enja</th>
+			</tr>
+			<tr> 
+				<td>0512983800034</td>
+				<td>Milojevi�</td>
+				<td>Milan</td>
+				<td>milojevic.milan@uns.ac.rs</td>
+				<td><a href="member.html">zadu�enja</a></td>
+			</tr>
+			<tr> 
+				<td>0611975800039</td>
+				<td>Vidojevi�</td>
+				<td>Danko</td>
+				<td>vidojevic.danko@uns.ac.rs</td>
+				<td><a href="member.html">zadu�enja</a></td>
+			</tr>
+			<tr> 
+				<td>2301987800022</td>
+				<td>Dejanovi�</td>
+				<td>Milan</td>
+				<td>dejanovic.milan@uns.ac.rs</td>
+				<td><a href="member.html">zadu�enja</a></td>
+			</tr>
+		</table>
+		<p>
+			<a href="add_member.html">Dodavanje novog �lana</a>
+		</p>
+		<h2>Zadu�enja:</h2>
+		<form action="#" method="get">
+			<select name="filter">
+				<option value="all" selected>Spisak svih zadu�enja</option>
+				<option value="allActive">Spisak svih aktivnih zadu�enja</option>
+				<option value="allWarningActive">Spisak svih aktivnih zadu�enja gde je rok probijen</option>
+			</select>
+			<input name="" type="submit" value="Filtriraj">
+		</form>
+  		<table border="1" width="100%">
+			<tr bgcolor="lightgrey">
+				<th width="30%">JMBG</th>
+				<th width="30%">ISBN</th>
+				<th width="20%">Datum zadu�enja</th>
+				<th width="20%">Datum vra�anja</th>
+			</tr>
+			<tr> 
+				<td>0512983800034</td>
+				<td>86-7555-104-5</td>
+				<td>13.04.2009</td>
+				<td>20.04.2009</td>
+			</tr>
+			<tr> 
+				<td>0512983800034</td>
+				<td>0-7356-1721-X</td>
+				<td>20.04.2009</td>
+				<td><a href="return_book.html">vra�anje knjige</a></td>
+			</tr>
+			<tr> 
+				<td>0611975800039</td>
+				<td>86-7555-104-5</td>
+				<td>22.04.2009</td>
+				<td><a href="return_book.html">vra�anje knjige</a></td>
+			</tr>
+		</table>
+		<p>
+			<a href="index.html">Odjava</a>
+		</p>
+	</body>
+</html>

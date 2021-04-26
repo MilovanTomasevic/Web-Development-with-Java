@@ -1,0 +1,1 @@
+Zadatak 1. (3 poena) Realizovati prethodni zadatak upotrebom MVC Model 2 koncepta. Sve akcije submitt-ovanja formi moraju da završe na servletima (controller), koji æe zatim redirektovati na odgovarajuæu JSP stranicu (view). Podaci su veæ modelovani JavaBeans komponentama (model).

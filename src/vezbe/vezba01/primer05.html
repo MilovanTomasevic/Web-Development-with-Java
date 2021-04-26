@@ -1,0 +1,43 @@
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=Windows-1250">
+    <title>Preformatirani tekst</title>
+  </head>
+
+  <body>
+    <h1>Preformatirani tekst</h1>
+    <p>Sada ćemo navesti fragment programskog koda.</p>
+
+    <pre>
+public class PrviThread extends Thread {
+
+  /** Konstruktor
+    * @param threadID Identifikator niti
+    */
+  public PrviThread(int threadID) {
+    this.threadID = threadID;
+    counter = 10000;
+  }
+
+  /** Nit: na svaki 1000-ti prolaz petlje ispisi poruku na konzolu.
+    */
+  public void run() {
+    while (counter > 0) {
+      if (counter % 1000 == 0)
+        System.out.println("Thread[" + threadID + "]: " + (counter/1000));
+      counter--;
+    }
+  }
+
+  /** Brojac petlje unutar niti */
+  private int counter;
+  /** ID niti */
+  private int threadID;
+}
+    </pre>
+
+    <p>A sada nastavljamo standardan tekst.</p>
+  </body>
+
+</html>
